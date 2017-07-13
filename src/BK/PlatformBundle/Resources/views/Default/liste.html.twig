@@ -1,0 +1,30 @@
+{% extends "BKPlatformBundle::accueil.html.twig" %}
+	
+
+{% block body %}	
+		
+		<table  border="1" cellpadding="10" cellspacing="0" width="100%">
+			<caption align="top" class="bkCaption">Mes Amis</caption>
+			<tr>
+				<th>PSEUDO</th>
+				<th>AGE</th>
+				<th>FAMILLE</th>
+				<th>RACE</th>
+				<th>NOURRITURE</th>
+				<th class="text-center">Actions</th>
+			</tr>
+			<tr> {% for g in gestion %}
+				<td>{{ g.login }}</td>
+				<td>{{ g.age }}</td>
+				<td>{{ g.famille }}</td>
+				<td>{{ g.race }}</td>
+				<td>{{ g.nourriture }}</td>
+				<td>
+					 <a class="bkBtn" href="{{ path('bk_platform_supprimer', { 'id': g.id }) }}"> Supprimer </a>   
+				</td>
+			</tr>{% endfor %}
+
+		</table>
+{% endblock %}	  
+
+

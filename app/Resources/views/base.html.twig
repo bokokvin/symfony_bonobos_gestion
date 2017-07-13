@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+	<!--table border="1" cellpadding="10" cellspacing="1" width="100%">
+			<tr>
+				<th>LOGIN</th>
+				<th>MOT DE PASSE</th>
+				
+			</tr>
+			<tr> 
+	
+			</tr>
+			</table-->
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

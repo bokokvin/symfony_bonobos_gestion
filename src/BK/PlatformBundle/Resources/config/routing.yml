@@ -1,0 +1,28 @@
+bk_platform_homepage:
+    path:    /homepage
+    defaults: { _controller: BKPlatformBundle:Ami:Home}
+bk_platform_lister:
+    path:    /lister
+    defaults: { _controller: BKPlatformBundle:Ami:Lister}
+bk_platform_supprimer:
+    path:    /supprimer/{id}
+    defaults: { _controller: BKPlatformBundle:Ami:Supprimer}
+bk_platform_rechercher:
+    path:    /rechercher
+    defaults: { _controller: BKPlatformBundle:Ami:Rechercher}
+bk_platform_modifier:
+    path:    /modifier
+    defaults: { _controller: BKPlatformBundle:Ami:Modifier}
+bk_platform_modification:
+    path:    /modification
+    defaults: { _controller: BKPlatformBundle:Ami:Modification}
+bk_platform_ajouter:
+    path:    /ajouter/{id}
+    defaults: { _controller: BKPlatformBundle:Ami:Ajouter}
+bk_platform_ajout_user:
+    path:    /ajoutUser
+    defaults: { _controller: BKPlatformBundle:Ami:AjoutUser}
+bk_platform_inscription:
+    path:    /inscription
+    defaults: { _controller: BKPlatformBundle:Ami:Inscription}
+

@@ -1,0 +1,29 @@
+{% extends "BKPlatformBundle::accueil.html.twig" %}
+
+{% block body %}
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+			<caption align="top" class="bkCaption">Mon Profil</caption>
+			<tr>
+				<th>PSEUDO</th>
+				<th>MOT DE PASSE</th>
+				<th>AGE</th>
+				<th>FAMILLE</th>
+				<th>RACE</th>
+				<th>NOURRITURE</th>
+				<th class="text-center">Actions</th>
+			</tr>
+			<tr> 
+				<td>{{ gestion.login }}</td>
+				<td>{{ gestion.password }}</td>
+				<td>{{ gestion.age }}</td>
+				<td>{{ gestion.famille }}</td>
+				<td>{{ gestion.race }}</td>
+				<td>{{ gestion.nourriture }}</td>
+				<td>
+					 <a class="bkBtn" href="{{ path('bk_platform_modifier') }}"> Modifier </a>   
+				</td>
+			</tr>
+
+		</table>
+{% endblock %}	  

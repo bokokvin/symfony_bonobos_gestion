@@ -1,0 +1,38 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        BK\PlatformBundle\Entity\Ami: plaintext
+
+
+
+    providers:
+        super_main:
+            entity:
+                class:    BK\PlatformBundle\Entity\Ami
+                property: login
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main_login:
+            pattern:   ^/login$
+            anonymous: true 
+        main:
+            pattern:   ^/
+            anonymous: true
+            provider:  super_main
+            form_login:
+                login_path: login
+                check_path: login_check
+                default_target_path: /homepage
+            logout:
+                path:   logout
+                target: /login
+
+    access_control:
+        #- { path: ^/login, requires_channel: https }
+
+    
+
+        

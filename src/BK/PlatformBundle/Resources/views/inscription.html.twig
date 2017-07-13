@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% stylesheets 'bundles/bkplatform/css/main.css' %}
+		<link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+	{% endstylesheets %}
+  
+
+  
+ <form action="{{ path('bk_platform_ajout_user') }}" method="POST">
+    <label for="username">Login</label>
+    <input type="text" id="username" name="_login" }" />
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" name="_password" />
+	
+	<label for="password">Age</label>
+    <input type="text" name="_age"/>
+	
+	<label for="password">Nourriture</label>
+    <input type="text" name="_nourriture"/>
+	
+	<label for="password">Famille</label>
+    <input type="text" name="_famille"/>
+	
+	<label for="password">Race</label>
+    <input type="text" name="_race"/>
+    <br />
+    <input type="submit" value="Envoyer" />
+  </form>
+  
+{% endblock %}

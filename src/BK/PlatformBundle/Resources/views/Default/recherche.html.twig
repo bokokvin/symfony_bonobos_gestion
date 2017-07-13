@@ -1,0 +1,38 @@
+{% extends "BKPlatformBundle::accueil.html.twig" %}
+
+{% block body %}
+
+<div class="well">
+  {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+  {{ form_widget(form.login) }}
+  
+  {{ form_widget(form.rechercher) }}
+  
+  {{ form_end(form) }}
+</div>
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+			<tr>
+				<th>PSEUDO</th>
+				<th>PSEUDO</th>
+				<th>AGE</th>
+				<th>FAMILLE</th>
+				<th>RACE</th>
+				<th>NOURRITURE</th>
+				<th class="text-center">Actions</th>
+			</tr>
+			<tr> {% for g in gestion %}
+				<td>{{ g.login }}</td>
+				<td>{{ g.age }}</td>
+				<td>{{ g.famille }}</td>
+				<td>{{ g.race }}</td>
+				<td>{{ g.nourriture }}</td>
+				<td>
+					 <a class="bkBtn" href="{{ path('bk_platform_ajouter', { 'id': g.id }) }}"> Ajouter - </a>   
+				</td>
+			</tr>{% endfor %}
+
+		</table>
+{% endblock %}	
+
